@@ -1,0 +1,72 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name":"data-api",
+      "urls":[ 
+        "https://escuelaprimaria.net/wp-content/uploads/2020/06/comunicacion-para-quinto-de-primaria-compressor.jpg",
+        "https://imgs.search.brave.com/gTBBZ3a50kbA9CuwFT9lk03XidbYq0mThUnzM5x99sQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/MjAwMzk3Mi9lcy9m/b3RvL3JldHJhdG8t/ZGVsLWhvbWJyZS1h/ZnJvYW1lcmljYW5v/LXJpZW5kby1taXJh/bmRvLWhhY2lhLWFy/cmliYS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9blY2TDBD/RnVrTUNscUNsMWMx/YUlRUW1Zd0Yya3hq/V0xyQkVabFU3cEFP/TT0",
+        "https://imgs.search.brave.com/lrplHu3jk0HaObcA3WzxZUNmVzuGLOvZj_LmZ8jQWWE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTM4/MDM1MTA2L2VzL2Zv/dG8vc2lsdWV0YS1k/ZS1ob21icmUtYWZy/aWNhbm8tYWlzbGFk/by1yZXRyYXRvLWRl/LXBlcmZpbC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VWxX/d0dOQWp4OUlDS2cw/eUVUdkkwREVpTEc5/bTV0Y1pyWUR0T05h/Tmtkdz0",
+        "https://escuelaprimaria.net/wp-content/uploads/2019/11/matematica-para-tercero-de-primaria.jpg",
+        "https://escuelaprimaria.net/wp-content/uploads/2019/11/comunicacion-para-tercero-de-primaria.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv17ddN_c-akOLfc6gOusug0YGRXIQS9xgSfHMn7HQlPq25NeA0H5GQwkFMh4oPnr7Af0&usqp=CAU",
+        "https://escuelaprimaria.net/wp-content/uploads/2019/11/personal-social-para-tercero-de-primaria.jpg",
+        "https://escuelaprimaria.net/wp-content/uploads/2020/06/ciencia-y-ambiente-para-quinto-de-primaria-compressor.jpg",
+        "htps://escuelaprimaria.net/wp-content/uploads/2020/06/comprension-lectora-para-quinto-de-primaria.jpg",
+        
+        "https://escuelaprimaria.net/wp-content/uploads/2019/01/comunicacion-para-primero-de-primaria.jpg",
+        "https://png.pngtree.com/thumb_back/fw800/background/20210902/pngtree-summer-cram-school-summer-class-border-holiday-training-education-green-image_789183.jpg",
+        
+        "https://www.hogarmania.com/archivos/202308/burrito-mexicano-1280x720x80xX.jpg",
+         "https://i.pinimg.com/474x/74/43/27/744327b2f1016a2cdb2720226cdb5b9a.jpg",
+        "https://cashlogy.com/wp-content/uploads/2022/05/ingenieria-de-menu-para-restaurantes-768x310.jpg",
+        "https://cdn0.recetasgratis.net/es/posts/3/5/2/enchiladas_verdes_mexicanas_42253_orig.jpg",
+        "https://storage.googleapis.com/fitia-api-bucket/media/images/recipe_images/1003380.jpg",    
+        "https://www.comedera.com/wp-content/uploads/2017/08/tacos-al-pastor-receta.jpg",
+        "https://www.maricruzavalos.com/wp-content/uploads/2019/09/flautas-de-pollo-recipe-500x375.jpg",
+        "https://i0.wp.com/ellatinoonline.com/wp-content/uploads/2022/03/pozole-3-scaled-1.jpg?fit=1200%2C1166&ssl=1",
+        "https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750105530208L.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "https://static1.s123-cdn-static-a.com/uploads/402628/800_598a1ae2a92a6.jpg",
+         "https://cdn7.kiwilimon.com/recetaimagen/16297/8238.jpg",
+         "https://www.canva.com/design/DAF2Ij2NIm4/ASE-ZFyRCCkCEFZXpzIe_Q/view?utm_content=DAF2Ij2NIm4&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+         "https://photos.google.com/photo/AF1QipNN-TUVJ-hLq9fZFdC4UuHX5voMLBB-DQGcjB6Q",
+         "https://i.postimg.cc/7P96JVVP/2.png",
+         "https://i.postimg.cc/XJ950bKV/1.png"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 5,
+        "maxAge": "50m",
+        "timeout": "5s"
+      }
+
+    }
+  ]
+}
